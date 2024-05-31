@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:sysml="http://www.omg.org/spec/SysML/20161101/SysML" xmlns:uml="http://www.omg.org/spec/UML/20131001">
+  <uml:Model xmi:id="_gIgOQB8REe-ZRp2iIdqyAA" name="Root">
+    <packagedElement xmi:type="uml:Class" xmi:id="_upNeoB8REe-ZRp2iIdqyAA" name="Product">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_xsPKwB8REe-ZRp2iIdqyAA" name="title" visibility="public" aggregation="composite">
+        <type xmi:type="uml:DataType" href="http://www.omg.org/spec/SysML/20161101/SysML.xmi#SysML_dataType.String"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_2Z-sQB8REe-ZRp2iIdqyAA" value=""/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_2tEnYB8REe-ZRp2iIdqyAA" name="description" visibility="public" aggregation="composite">
+        <type xmi:type="uml:DataType" href="http://www.omg.org/spec/SysML/20161101/SysML.xmi#SysML_dataType.String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_IIFswB8SEe-ZRp2iIdqyAA" name="variants" visibility="public" type="__vQZkB8REe-ZRp2iIdqyAA" association="_IICpcB8SEe-ZRp2iIdqyAA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PacgEB8SEe-ZRp2iIdqyAA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PahYkB8SEe-ZRp2iIdqyAA" value="*"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="__vQZkB8REe-ZRp2iIdqyAA" name="ProductVariant">
+      <ownedRule xmi:type="uml:Constraint" xmi:id="_Ikj7cB8UEe-ZRp2iIdqyAA" constrainedElement="__vQZkB8REe-ZRp2iIdqyAA">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_IktscB8UEe-ZRp2iIdqyAA">
+          <body>display_name = product.title + &quot; &quot; + title</body>
+        </specification>
+      </ownedRule>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_IILMUB8SEe-ZRp2iIdqyAA" name="product" visibility="public" type="_upNeoB8REe-ZRp2iIdqyAA" isUnique="false" association="_IICpcB8SEe-ZRp2iIdqyAA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_NA5OwB8SEe-ZRp2iIdqyAA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_NBg50B8SEe-ZRp2iIdqyAA" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_GhQcYB8TEe-ZRp2iIdqyAA" name="title" visibility="public" aggregation="composite">
+        <type xmi:type="uml:DataType" href="http://www.omg.org/spec/SysML/20161101/SysML.xmi#SysML_dataType.String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_H23kcB8TEe-ZRp2iIdqyAA" name="description" visibility="public" aggregation="composite">
+        <type xmi:type="uml:DataType" href="http://www.omg.org/spec/SysML/20161101/SysML.xmi#SysML_dataType.String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_DmMkAB8UEe-ZRp2iIdqyAA" name="/display_name" visibility="public" aggregation="composite">
+        <type xmi:type="uml:DataType" href="http://www.omg.org/spec/SysML/20161101/SysML.xmi#SysML_dataType.String"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_IICpcB8SEe-ZRp2iIdqyAA" memberEnd="_IIFswB8SEe-ZRp2iIdqyAA _IILMUB8SEe-ZRp2iIdqyAA"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_wyxvAB8YEe-ZRp2iIdqyAA" name="CreateProductForm">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="__auIcB8bEe-ZRp2iIdqyAA" name="Title" visibility="public" type="_jbak8B8bEe-ZRp2iIdqyAA" isUnique="false" association="__athYB8bEe-ZRp2iIdqyAA"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Pa8q0B8cEe-ZRp2iIdqyAA" name="Description" visibility="public" type="_lMHGgB8bEe-ZRp2iIdqyAA" association="_Pa8DwB8cEe-ZRp2iIdqyAA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_jbak8B8bEe-ZRp2iIdqyAA" name="TextInput">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="__av9oB8bEe-ZRp2iIdqyAA" visibility="public" type="_wyxvAB8YEe-ZRp2iIdqyAA" association="__athYB8bEe-ZRp2iIdqyAA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_lMHGgB8bEe-ZRp2iIdqyAA" name="TextArea">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Fb8EAB8cEe-ZRp2iIdqyAA" visibility="public" type="_wyxvAB8YEe-ZRp2iIdqyAA" association="_Fb3LgB8cEe-ZRp2iIdqyAA"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Pa_HEB8cEe-ZRp2iIdqyAA" visibility="public" type="_wyxvAB8YEe-ZRp2iIdqyAA" association="_Pa8DwB8cEe-ZRp2iIdqyAA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="__athYB8bEe-ZRp2iIdqyAA" name="Title" memberEnd="__auIcB8bEe-ZRp2iIdqyAA __av9oB8bEe-ZRp2iIdqyAA"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_Fb3LgB8cEe-ZRp2iIdqyAA" name="Description" memberEnd="_Fb4ZoB8cEe-ZRp2iIdqyAA _Fb8EAB8cEe-ZRp2iIdqyAA">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_Fb4ZoB8cEe-ZRp2iIdqyAA" name="Description" visibility="public" type="_lMHGgB8bEe-ZRp2iIdqyAA" owningAssociation="_Fb3LgB8cEe-ZRp2iIdqyAA" association="_Fb3LgB8cEe-ZRp2iIdqyAA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_Pa8DwB8cEe-ZRp2iIdqyAA" memberEnd="_Pa8q0B8cEe-ZRp2iIdqyAA _Pa_HEB8cEe-ZRp2iIdqyAA"/>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_gIm78B8REe-ZRp2iIdqyAA" applyingPackage="_gIgOQB8REe-ZRp2iIdqyAA">
+      <appliedProfile xmi:type="uml:Profile" href="http://www.omg.org/spec/SysML/20161101/SysML.xmi#SysML"/>
+    </profileApplication>
+  </uml:Model>
+  <sysml:Block xmi:id="_upfygB8REe-ZRp2iIdqyAA" base_Class="_upNeoB8REe-ZRp2iIdqyAA"/>
+  <sysml:Block xmi:id="__wDq0B8REe-ZRp2iIdqyAA" base_Class="__vQZkB8REe-ZRp2iIdqyAA"/>
+  <sysml:Block xmi:id="_wyzkMB8YEe-ZRp2iIdqyAA" base_Class="_wyxvAB8YEe-ZRp2iIdqyAA"/>
+  <sysml:Block xmi:id="_jbh5sB8bEe-ZRp2iIdqyAA" base_Class="_jbak8B8bEe-ZRp2iIdqyAA"/>
+  <sysml:Block xmi:id="_lMIUoB8bEe-ZRp2iIdqyAA" base_Class="_lMHGgB8bEe-ZRp2iIdqyAA"/>
+</xmi:XMI>
